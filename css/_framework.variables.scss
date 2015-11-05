@@ -1,0 +1,29 @@
+// main: _main.scss
+
+/* Size variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$s-devices:     Not really needed;
+$m-devices:     500px;
+$l-devices:     1000px;
+$max-width:     1240px;
+$column-width:  (100% / 12);
+$column-gutter: 10px;
+
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$white: #ffffff;
+$gray:  #d2d6da;
+$black: #111111;
+
+/* Style variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$main-font-size:     16px;
+$main-line-height:   1.25em;
+$main-font-weight:   400;
+$main-font-family:   "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$main-text-color:    $black;
+$main-border-radius: 3px;
+
+/* Form elements variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$input-padding: 10px 14px;

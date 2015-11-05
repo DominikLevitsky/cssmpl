@@ -1,0 +1,207 @@
+// main: _main.scss
+
+/* Main styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+	font-size: $main-font-size;
+	line-height: $main-line-height;
+	font-weight: $main-font-weight;
+	font-family: $main-font-family;
+	color: $main-text-color;
+}
+
+.container {
+	max-width: $max-width;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Grid system
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.row {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.column {
+	width: 100%;
+	float: left;
+	padding: 0 $column-gutter;
+
+	&:first-child { padding-left: 0; }
+	&:last-child { padding-right: 0; }
+
+	&.s-1    { width: $column-width; }
+	&.s-2    { width: $column-width * 2; }
+	&.s-3    { width: $column-width * 3; }
+	&.s-4    { width: $column-width * 4; }
+	&.s-5    { width: $column-width * 5; }
+   &.s-6    { width: $column-width * 6; }
+   &.s-7    { width: $column-width * 7; }
+   &.s-8    { width: $column-width * 8; }
+   &.s-9    { width: $column-width * 9; }
+   &.s-10   { width: $column-width * 10; }
+   &.s-11   { width: $column-width * 11; }
+   &.s-full { width: 100%; }
+
+	// Margin auto enabler and disabler
+	&.s-centered { margin: 0 auto; float: none; }
+
+	@media (min-width: $m-devices) {
+		&.m-1    { width: $column-width; }
+		&.m-2    { width: $column-width * 2; }
+		&.m-3    { width: $column-width * 3; }
+		&.m-4    { width: $column-width * 4; }
+		&.m-5    { width: $column-width * 5; }
+	   &.m-6    { width: $column-width * 6; }
+	   &.m-7    { width: $column-width * 7; }
+	   &.m-8    { width: $column-width * 8; }
+	   &.m-9    { width: $column-width * 9; }
+	   &.m-10   { width: $column-width * 10; }
+	   &.m-11   { width: $column-width * 11; }
+	   &.m-full { width: 100%; }
+
+		// Margin auto enabler and disabler
+		&.s-centered { margin: inherit; float: left; }
+		&.m-centered { margin: 0 auto; float: none; }
+	}
+
+	@media (min-width: $l-devices) {
+		& { margin: inherit; float: left; }
+
+		&.l-1    { width: $column-width; }
+		&.l-2    { width: $column-width * 2; }
+		&.l-3    { width: $column-width * 3; }
+		&.l-4    { width: $column-width * 4; }
+		&.l-5    { width: $column-width * 5; }
+	   &.l-6    { width: $column-width * 6; }
+	   &.l-7    { width: $column-width * 7; }
+	   &.l-8    { width: $column-width * 8; }
+	   &.l-9    { width: $column-width * 9; }
+	   &.l-10   { width: $column-width * 10; }
+	   &.l-11   { width: $column-width * 11; }
+	   &.l-full { width: 100%; }
+
+		// Margin auto enabler and disabler
+		&.s-centered { margin: inherit; float: left; }
+		&.m-centered { margin: inherit; float: left; }
+	   &.l-centered { margin: 0 auto; float: none; }
+	}
+}
+
+/* Form elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+	width: 100%;
+	padding: $input-padding;
+	background: $white;
+	border: 1px solid $gray;
+	border-radius: $main-border-radius;
+	box-shadow: none;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="submit"],
+textarea:focus,
+select:focus,
+button:focus {
+	outline: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+}
+
+input[type="submit"],
+button {
+	border: 0px none;
+	padding: $input-padding;
+	border-radius: $main-border-radius;
+}
+
+/* Utility styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+// Block hiding
+.s-hide { display: none; }
+.s-show { display: normal; }
+
+// Text align
+.s-align-left { text-align: left; }
+.s-align-center { text-align: center; }
+.s-align-right { text-align: right; }
+
+// Block floating
+.s-float-left { float: left; }
+.s-float-right { float: right; }
+.s-float-none { float: none; }
+
+@media (min-width: $m-devices) {
+	// Block hiding
+	.m-hide { display: none; }
+	.m-show { display: normal; }
+
+	// Text align
+	.m-align-left { text-align: left; }
+	.m-align-center { text-align: center; }
+	.m-align-right { text-align: right; }
+
+	// Block floating
+	.m-float-left { float: left; }
+	.m-float-right { float: right; }
+	.m-float-none { float: none; }
+}
+
+@media (min-width: $l-devices) {
+	// Block hiding
+	.l-hide { display: none; }
+	.l-show { display: normal; }
+
+	// Text align
+	.l-align-left { text-align: left; }
+	.l-align-center { text-align: center; }
+	.l-align-right { text-align: right; }
+
+	// Block floating
+	.l-float-left { float: left; }
+	.l-float-right { float: right; }
+	.l-float-none { float: none; }
+}
+
+/* Media queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+//Bigger then smartphones
+@media (min-width: $m-devices) {}
+//Bigger then tablets
+@media (min-width: $l-devices) {}
